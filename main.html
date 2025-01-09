@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1 style="color: blue; text-align: center; margin-top: 10%;">UwU</h1>
+    <div id="header">
+        <h1>Rock Paper Scissors</h1>
+    <h2>The Revenge</h2>
+
+    </div>
+<br><br>
+    <div class="input">
+        <input type="text">
+        <button onclick="changePlayerName()">Add name</button>
+    </div>
+    
+    <br>
+    <br>
+    <div class="buttons">
+        <button id="scissors">Scissors</button>
+        <button id="paper">Paper</button>
+        <button id="rock">Rock</button>
+        <button onclick="playRound()">PlayRound</button>
+    </div>
+    <br>
+    <br>
+    <h1>Results</h1>
+    <div class="results">
+
+    </div>
 
     <script src="game.js"></script>
 </body>
