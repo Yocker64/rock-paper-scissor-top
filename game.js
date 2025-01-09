@@ -24,6 +24,16 @@ function playRound() {  //This gets the two names of the players as an input
 //Deciding the winner through the old and good logic of paper scissor
 function decideWinner(player1, player1choice, player2, player2choice) {
   message =  "";
+  if (counter > 5) {
+    if (scoreplayer1 > scoreplayer2) {
+      alert("It is over, " + player1 + " won!")
+    }else if(scoreplayer1 < scoreplayer2){
+      alert("It is over, " + player2 + " won!")
+    }else{
+      alert("The match result is a draw")
+    }
+    
+    }else{
     //Using the fact that no matter the string, if both strings are the same it is a draw
   if (player1choice == player2choice) {
     message = counter + ": Both of you chose the same: " + player1choice + ".\n It is a draw"
@@ -52,10 +62,12 @@ function decideWinner(player1, player1choice, player2, player2choice) {
       scoreplayer2++;
     }
   }
+
   child = document.createElement('p');
   child.innerText = message;
   fieldToAppend.appendChild(child);
   counter ++;
+}
 }
 
 //Getting the play from the human player
